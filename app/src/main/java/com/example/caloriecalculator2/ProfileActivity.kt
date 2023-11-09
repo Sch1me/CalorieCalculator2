@@ -17,6 +17,7 @@ class ProfileActivity : AppCompatActivity() {
         var weightArrayList = ArrayList<String>()
         var waterArrayList = ArrayList<String>()
         var caloriesArrayList = ArrayList<String>()
+        var waterGoal = String()
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -117,12 +118,10 @@ class ProfileActivity : AppCompatActivity() {
                         binding.goToProgressBtn.visibility = View.VISIBLE
                         binding.changeStatsBtn.visibility = View.VISIBLE
                         binding.changeStatsBtnFAKE.visibility = View.GONE
+                        waterGoal = waterArrayList.last().toString()
 
                     }
                 }
 
-
-
-
-    }
+            }
 }}
