@@ -38,31 +38,31 @@
         app:layout_constraintTop_toBottomOf="@id/progressTabGore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="150dp"/>
     <TextView
         android:id="@+id/waterHistoryTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WEIGHT: "
+        android:text="WATER: "
         android:textStyle="italic"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/progressTabGore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginTop="250dp"/>
     <TextView
         android:id="@+id/caloriesHistoryTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WEIGHT: "
+        android:text="CALORIES: "
         android:textStyle="italic"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@id/progressTabGore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="350dp"/>
 
     <Button
         android:id="@+id/backButton"

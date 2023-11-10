@@ -21,27 +21,32 @@ class ProgressActivity : AppCompatActivity() {
     if(ProfileActivity.weightArrayList.isNotEmpty()){
 
         weightArrayListProgress.add(ProfileActivity.weightArrayList.toString())
-        binding.weightHistoryTxt.text = weightArrayListProgress.toString() + "kg, "
+        weightArrayListProgress.forEach() {
 
+        }
     }
     if(ProfileActivity.waterArrayList.isNotEmpty()){
 
             waterArrayListProgress.add(ProfileActivity.waterArrayList.toString())
-            binding.waterHistoryTxt.text = waterArrayListProgress.toString() + "kg, "
+
+        waterArrayListProgress.forEach {
+            binding.waterHistoryTxt.text = waterArrayListProgress.toString()
+
+        }
+
+       // binding.waterHistoryTxt.text = waterArrayListProgress.toString() + "kg, "
 
     }
     if(ProfileActivity.caloriesArrayList.isNotEmpty()){
 
             caloriesArrayListProgress.add(ProfileActivity.caloriesArrayList.toString())
-            binding.caloriesHistoryTxt.text = caloriesArrayListProgress.toString() + "kg, "
+            binding.caloriesHistoryTxt.text = caloriesArrayListProgress.toString() + "kcal, "
 
     }
 
         binding.backButton.setOnClickListener{
             intent = Intent(this, ProfileActivity::class.java)
-            intent.putExtra("calories", ProfileActivity.caloriesArrayList.clear().toString())
-            intent.putExtra("weight", ProfileActivity.weightArrayList.clear().toString())
-            intent.putExtra("water", ProfileActivity.waterArrayList.clear().toString())
+
             startActivity(intent)
         }
 
@@ -53,6 +58,10 @@ class ProgressActivity : AppCompatActivity() {
             binding.weightHistoryTxt.text = ""
             binding.waterHistoryTxt.text = ""
             binding.caloriesHistoryTxt.text = ""
+            intent.putExtra("calories", ProfileActivity.caloriesArrayList.clear().toString())
+            intent.putExtra("weight", ProfileActivity.weightArrayList.clear().toString())
+            intent.putExtra("water", ProfileActivity.waterArrayList.clear().toString())
+            startActivity(intent)
 
         }
 
